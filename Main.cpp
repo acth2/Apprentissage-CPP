@@ -54,15 +54,42 @@
 //specifie que tu utilise std
 using namespace std;
 
+int a;
+int b;
+int testwhile = 0;
+int numberg = 138;
+int propg;
+int age = 13;
+char name[] = "";
+int end_count = 0;
+int table = 0;
+int firstif = 0;
+
+void verifyg()
+{
+	cin >> propg;
+
+	do {
+
+		if (propg > numberg)
+		{
+			cout << "Plus petit.. \n";
+			verifyg();
+		}
+		else if (numberg > propg) {
+
+			cout << "Plus grand.. \n";
+			verifyg();
+		}
+		else {
+			break;
+		}
+
+	} while (propg == numberg);
+}
+
 int main()
 {
-	int a;
-	int b;
-	int age = 13;
-	char name[] = "";
-	int end_count = 0;
-	int table = 0;
-	int firstif = 0;
 
 	//===================================================================
 
@@ -76,7 +103,7 @@ int main()
 	cin >> age;
 	cin.ignore();
 
-	cout << "Tu t'appelle: " << name << " et" << " tu as " << age << " ans! \n";
+	cout << "Tu t'appelle " << name << " et" << " tu as " << age << " ans! \n";
 	cin.ignore();
 
 	//===================================================================
@@ -102,7 +129,7 @@ int main()
 		cout << "0\n" << std::endl;
 		cin.ignore();
 	}
-
+	
 	cout << "\n" << std::endl;
 	cout << "Compte de 0 a 10 avec la boucle for\n" << std::endl;
 	cout << "Jusqu'a combien le programme va compter?:" << std::endl;
@@ -129,7 +156,28 @@ int main()
 
 	//===================================================================
 
+	do
+	{
+		cout << "ecrivez n'importe quelle nombre autre que 0 pour quitte la boucle.. \n";
+		cout << "Ecrire: ";
+		cin >> testwhile;
+		cout << "\n\n\n";
+		cin.ignore();
 
+	} while (testwhile == 0);
+
+	//===================================================================
+	
+	cout << "MiniJeux '+' ou '-' ? \n";
+	cout << "------------------------ \n";
+	cout << "Les regles sont simples, il y'a un nombre et vous devrez le devine.\n";
+	cout << "Le programme vous aideras en vous ecrivant dans la console 'Plus grand' ou 'Plus petit' \n";
+	cout << "------------------------ \n\n";
+	cout << "(0 - 500)' \n";
+	cout << "Ecrivez: ";
+	verifyg();
+
+	cout << "Bravo le nombre est belle et bien " << numberg << " !";
 
 	exit(0);
 }
