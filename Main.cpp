@@ -50,43 +50,12 @@
 //
 
 #include <iostream>
-
+#include "func.hpp"
+#include "var.hpp"
 //specifie que tu utilise std
 using namespace std;
 
-int a;
-int b;
-int testwhile = 0;
-int numberg = 138;
-int propg;
-int age = 13;
-char name[] = "";
-int end_count = 0;
-int table = 0;
-int firstif = 0;
 
-void verifyg()
-{
-	cin >> propg;
-
-	do {
-
-		if (propg > numberg)
-		{
-			cout << "Plus petit.. \n";
-			verifyg();
-		}
-		else if (numberg > propg) {
-
-			cout << "Plus grand.. \n";
-			verifyg();
-		}
-		else {
-			break;
-		}
-
-	} while (propg == numberg);
-}
 
 int main()
 {
@@ -177,7 +146,45 @@ int main()
 	cout << "Ecrivez: ";
 	verifyg();
 
-	cout << "Bravo le nombre est belle et bien " << numberg << " !";
+	cout << "Bravo le nombre est belle et bien 138 ! \n\n\n";
+
+	//===================================================================
+
+	cout << add(1, 2);
+	
+	cin.ignore();
+
+	//====================================================================
+
+	cout << "\n\n\nTableau de nombres ! (4)\n";
+	cout << "Valeur 0: ";
+	cin >> t10;
+	tableau1[0] = t10;
+	cout << "\nValeur 1: ";
+	cin >> t11;
+	tableau1[1] = t11;
+	cout << "\nValeur 2: ";
+	cin >> t12;
+	tableau1[2] = t12;
+	cout << "\nValeur 3: ";
+	cin >> t13;
+	tableau1[3] = t13;
+	cout << "\n\n============RESULTAT\n";
+	cout << "Valeur 0: " << t10 << "\n";
+	cout << "Valeur 1: " << t11 << "\n";
+	cout << "Valeur 2: " << t12 << "\n";
+	cout << "Valeur 3: " << t13 << "\n";
+	cout << "\n=====================\n";
+
+	//==================================================================== POINTEURS
+
+	cout << "Address de AA: " << p_inta << "\n";
+	cout << "Address de BB: " << p_intb << "\n\n\n\n";
+
+	//Je ne suis pas allé plus loins sur ce qui concerne les pointeurs car je ne pense pas en a avoir besoin,
+	//meme si j'ai regardé la documentation entiere dessus !
+
+	//====================================================================
 
 	exit(0);
 }
